@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dfe-FD-JUN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Ob8-fg-eSs">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="dfe-FD-JUN" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="y5G-Tt-AQQ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Z2v-2C-qnA" kind="relationship" relationship="rootViewController" id="4sU-MQ-x1h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nsX-57-W7E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1364" y="53"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="oNV-xK-dy7">
+            <objects>
+                <viewController id="Z2v-2C-qnA" customClass="ViewController" customModule="Project_02_TumblrMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8wd-LU-gTC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aO7-FO-9O1">
+                                <rect key="frame" x="163.5" y="613" width="48" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="YwW-kU-pOB"/>
+                                    <constraint firstAttribute="width" constant="48" id="fqa-z3-10B"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="storyboard_post_button_48x34_"/>
+                                <connections>
+                                    <segue destination="Wg0-B8-Fhb" kind="presentation" modalPresentationStyle="overFullScreen" id="EhL-NW-DLJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.17096446441911606" green="0.26341579749392818" blue="0.46273437500000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aO7-FO-9O1" firstAttribute="centerX" secondItem="8wd-LU-gTC" secondAttribute="centerX" id="Gj6-1b-pQr"/>
+                            <constraint firstItem="fKR-l9-sFg" firstAttribute="bottom" secondItem="aO7-FO-9O1" secondAttribute="bottom" constant="20" id="vvw-4i-Vas"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fKR-l9-sFg"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aoM-kC-WnH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tof-5e-033" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="7Pu-ta-Tq8" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-567" y="53"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="IKW-yq-lPT">
+            <objects>
+                <viewController id="Wg0-B8-Fhb" customClass="MenuViewController" customModule="Project_02_TumblrMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="DjR-vz-T9K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kt8-xp-G0w">
+                                <rect key="frame" x="156.5" y="617" width="62" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Rmp-Ug-VtL"/>
+                                    <constraint firstAttribute="width" constant="62" id="ppD-Lv-saD"/>
+                                </constraints>
+                                <state key="normal" title="以后再说">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7Pu-ta-Tq8" kind="unwind" unwindAction="unwindToViewController:" id="oim-rn-Ozg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6M-gb-snO" customClass="CustomButton" customModule="Project_02_TumblrMenu" customModuleProvider="target">
+                                <rect key="frame" x="156" y="289" width="60" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="4hy-mw-VsD"/>
+                                    <constraint firstAttribute="width" constant="60" id="79d-Hk-Fvv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="图片" image="compose_btn_photo_66x66_"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.42911381190696596" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="q6M-gb-snO" firstAttribute="centerY" secondItem="DjR-vz-T9K" secondAttribute="centerY" constant="-4.5" id="2EZ-os-BD7"/>
+                            <constraint firstItem="O1n-Bm-NZH" firstAttribute="bottom" secondItem="kt8-xp-G0w" secondAttribute="bottom" constant="20" id="Ejc-RU-E9J"/>
+                            <constraint firstItem="q6M-gb-snO" firstAttribute="centerX" secondItem="DjR-vz-T9K" secondAttribute="centerX" constant="-1.5" id="FOo-pT-rCC"/>
+                            <constraint firstItem="kt8-xp-G0w" firstAttribute="centerX" secondItem="DjR-vz-T9K" secondAttribute="centerX" id="I2e-dh-B5S"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O1n-Bm-NZH"/>
+                    </view>
+                    <connections>
+                        <outlet property="picButton" destination="q6M-gb-snO" id="UHG-wN-BVP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bux-SS-p20" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="221.59999999999999" y="52.623688155922046"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="compose_btn_photo_66x66_" width="66" height="66"/>
+        <image name="storyboard_post_button_48x34_" width="48" height="34"/>
+    </resources>
+</document>

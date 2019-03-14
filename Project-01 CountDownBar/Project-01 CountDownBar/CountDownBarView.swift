@@ -54,7 +54,7 @@ class CountDownBarView: UIView {
     @objc fileprivate func countDown() {
         timeTemp? -= 1
         if timeTemp! >= 0 {
-            timeLabel.text = String(timeTemp!) + "秒"
+            timeLabel.text = "\(timeTemp!) 秒"
             if timeTemp! == 0 {
                 if timer != nil {
                     timer!.invalidate() 
