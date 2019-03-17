@@ -11,3 +11,11 @@ Project-01 CountDownBar
 Project-02 TumblrMenu
 
 <img src="https://github.com/fnegdaq/Study-Swift/blob/master/Project-02%20TumblrMenu/Jietu20190314-114342.gif" width="325" height="612" alt="project1"/> 
+
+
+Project-03 MOO音乐</br>
+
+看了一天音频相关，好复杂啊...  一些地方很难理解，还是得多学习～<br />
+> learning in [potato04](https://juejin.im/post/5c1bbec66fb9a049cb18b64c)<br />
+
+<img src="https://github.com/fnegdaq/Study-Swift/blob/master/Project-03%20MOO%E9%9F%B3%E4%B9%90/Jietu20190318-000107.gif" width="325" height="612" alt="project1"/> 
