@@ -29,6 +29,7 @@ extension TransitioningDelegate: UIViewControllerAnimatedTransitioning {
         }
         
         UIView.animate(withDuration: self.transitionDuration(using: transitionContext), delay: 0, usingSpringWithDamping: 0.95, initialSpringVelocity: 0.8, options: [], animations: {
+            // 为了present dismiss都有动画
             if self.isPresenting {
                 self.setEndAnimation(menuController)
             } else {
