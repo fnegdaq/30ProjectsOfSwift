@@ -22,7 +22,6 @@ class FD_CollectionCell: UICollectionViewCell {
         self.addSubview(imageView)
         
         titleLabel = UILabel(frame: CGRect(x: 40, y: 40, width: 100, height: 40))
-        titleLabel.text = "hehe"
         self.addSubview(titleLabel)
     }
     

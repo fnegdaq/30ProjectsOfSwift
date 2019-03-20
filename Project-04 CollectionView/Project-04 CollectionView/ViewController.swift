@@ -10,13 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var backgroundImageView : UIImageView!
     var collectionView : UICollectionView!
     var layout = FD_CollectionLayout()
-    var backgroundImageView : UIImageView!
+    
+    var beginPoint = CGPoint(x: 0, y: 0)
+    var endPoint = CGPoint(x: 0, y: 0)
+    var currentIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         setupViews()
     }
     
@@ -35,6 +38,7 @@ class ViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.register(FD_CollectionCell.self, forCellWithReuseIdentifier: "collectionCell")
         collectionView.backgroundColor = UIColor.clear
+        collectionView.showsHorizontalScrollIndicator = false
         view.addSubview(collectionView)
     }
     
@@ -47,11 +51,12 @@ class ViewController: UIViewController {
 extension ViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! FD_CollectionCell
+        cell.imageView.image = UIImage.init(named: "WechatIMG3\(indexPath.item).jpeg")
         return cell
     }
     
@@ -63,4 +68,27 @@ extension ViewController: UICollectionViewDelegate {
         
     }
     
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        beginPoint = scrollView.contentOffset
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        endPoint = scrollView.contentOffset
+        
+        let dragMinDistence = collectionView.bounds.width/15
+        if endPoint.x - beginPoint.x > dragMinDistence {
+            currentIndex += 1
+        } else if beginPoint.x - endPoint.x > dragMinDistence {
+            currentIndex -= 1
+        }
+
+        let count  = collectionView.numberOfItems(inSection: 0) - 1;
+        currentIndex = currentIndex <= 0 ? 0 : currentIndex;
+        currentIndex = currentIndex >= count ? count : currentIndex;
+        
+        DispatchQueue.main.async {
+            self.backgroundImageView.image = UIImage.init(named: "WechatIMG3\(self.currentIndex).jpeg")
+            self.collectionView.scrollToItem(at: NSIndexPath.init(row: self.currentIndex, section: 0) as IndexPath, at: UICollectionView.ScrollPosition.centeredHorizontally, animated: true)
+        }
+    }
 }
