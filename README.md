@@ -5,10 +5,14 @@ inspired by [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift
 ## Project Index & GIF Showcase
 Project-01 CountDownBar
 
+CAShapeLayer&UIBezierPath
+
 <img src="https://github.com/fnegdaq/Study-Swift/blob/master/Project-01%20CountDownBar/Jietu20190312-171327.gif" width="325" height="612" alt="project1"/> 
 
 
 Project-02 TumblrMenu
+
+It shows the implementation of a custom transition delegate by extending UIViewControllerAnimatedTransitioning and UIViewControllerTransitioningDelegate protocols
 
 <img src="https://github.com/fnegdaq/Study-Swift/blob/master/Project-02%20TumblrMenu/Jietu20190314-114342.gif" width="325" height="612" alt="project1"/> 
 
@@ -23,6 +27,7 @@ Project-03 MOO音乐
 
 Project-04 CollectionView
 
-纯代码搭建 CollectionView 练习
+Not using StoryBoard <br />
+It is implemented with custom UICollectionViewFlowLayout and UISrollView protocols.
 
 <img src="https://github.com/fnegdaq/Study-Swift/blob/master/Project-04%20CollectionView/Jietu20190320-135542.gif" width="325" height="612" alt="project1"/> 
