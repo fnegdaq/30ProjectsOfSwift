@@ -41,7 +41,7 @@ class FD_CollectionLayout: UICollectionViewFlowLayout {
                 let distance = abs(visibleRect.midX - attribute.center.x)
                 let distanceScale = distance / (self.collectionView?.bounds.width ?? UIScreen.main.bounds.width)
                 // 根据余弦曲线图 -pi/2~0~pi/2 之间，数值越小，变形越小, 越接近卡片高度 y = cos(x) 最高1
-                let scale = abs(cos(Double(distanceScale) * Double.pi/6))
+                let scale = abs(cos(Double(distanceScale) * Double.pi/5))
                 attribute.transform = CGAffineTransform(scaleX: 1.0, y: CGFloat(scale))
             }
         }

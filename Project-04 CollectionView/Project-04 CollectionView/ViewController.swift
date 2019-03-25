@@ -13,9 +13,10 @@ class ViewController: UIViewController {
     var backgroundImageView : UIImageView!
     var collectionView : UICollectionView!
     var layout = FD_CollectionLayout()
+    let fd_TransitioningDelegate = FD_TransitioningDelegate()
     
-    var beginPoint = CGPoint(x: 0, y: 0)
-    var endPoint = CGPoint(x: 0, y: 0)
+    var beginPoint = CGPoint.zero
+    var endPoint = CGPoint.zero
     var currentIndex = 0
     
     override func viewDidLoad() {
@@ -41,11 +42,6 @@ class ViewController: UIViewController {
         collectionView.showsHorizontalScrollIndicator = false
         view.addSubview(collectionView)
     }
-    
-    override func viewSafeAreaInsetsDidChange() {
-        collectionView.frame = CGRect(x: view.safeAreaInsets.left, y: view.safeAreaInsets.top, width: view.safeAreaLayoutGuide.layoutFrame.width, height: view.safeAreaLayoutGuide.layoutFrame.height)
-    }
-    
 }
 
 extension ViewController: UICollectionViewDataSource {
@@ -57,6 +53,7 @@ extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! FD_CollectionCell
         cell.imageView.image = UIImage.init(named: "WechatIMG3\(indexPath.item).jpeg")
+        cell.indexPath = indexPath
         return cell
     }
     
@@ -65,7 +62,9 @@ extension ViewController: UICollectionViewDataSource {
 extension ViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let detailViewController = DetailViewController()
+        let item = collectionView.cellForItem(at: indexPath)! as! FD_CollectionCell
+        fd_TransitioningDelegate.fd_Presend(self, detailViewController, item ,self.view.convert(item.frame, from: item.superview))
     }
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {

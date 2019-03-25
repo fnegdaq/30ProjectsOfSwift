@@ -17,6 +17,8 @@
 		468DF319223FDA0B00211389 /* WechatIMG32.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 468DF316223FDA0A00211389 /* WechatIMG32.jpeg */; };
 		468DF31A223FDA0B00211389 /* WechatIMG30.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 468DF317223FDA0A00211389 /* WechatIMG30.jpeg */; };
 		468DF31B223FDA0B00211389 /* WechatIMG31.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 468DF318223FDA0B00211389 /* WechatIMG31.jpeg */; };
+		46D90A982248D94900D1631C /* FD_TransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D90A972248D94900D1631C /* FD_TransitioningDelegate.swift */; };
+		46D90A9A2248DAF900D1631C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D90A992248DAF900D1631C /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		468DF316223FDA0A00211389 /* WechatIMG32.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WechatIMG32.jpeg; sourceTree = "<group>"; };
 		468DF317223FDA0A00211389 /* WechatIMG30.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WechatIMG30.jpeg; sourceTree = "<group>"; };
 		468DF318223FDA0B00211389 /* WechatIMG31.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WechatIMG31.jpeg; sourceTree = "<group>"; };
+		46D90A972248D94900D1631C /* FD_TransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FD_TransitioningDelegate.swift; sourceTree = "<group>"; };
+		46D90A992248DAF900D1631C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +70,10 @@
 			children = (
 				468DF2FF223FD4F500211389 /* AppDelegate.swift */,
 				468DF301223FD4F500211389 /* ViewController.swift */,
+				46D90A992248DAF900D1631C /* DetailViewController.swift */,
 				468DF313223FD62C00211389 /* FD_CollectionCell.swift */,
 				468DF311223FD52300211389 /* FD_CollectionLayout.swift */,
+				46D90A972248D94900D1631C /* FD_TransitioningDelegate.swift */,
 				468DF317223FDA0A00211389 /* WechatIMG30.jpeg */,
 				468DF318223FDA0B00211389 /* WechatIMG31.jpeg */,
 				468DF316223FDA0A00211389 /* WechatIMG32.jpeg */,
@@ -155,6 +161,8 @@
 			files = (
 				468DF312223FD52300211389 /* FD_CollectionLayout.swift in Sources */,
 				468DF302223FD4F500211389 /* ViewController.swift in Sources */,
+				46D90A982248D94900D1631C /* FD_TransitioningDelegate.swift in Sources */,
+				46D90A9A2248DAF900D1631C /* DetailViewController.swift in Sources */,
 				468DF300223FD4F500211389 /* AppDelegate.swift in Sources */,
 				468DF314223FD62C00211389 /* FD_CollectionCell.swift in Sources */,
 			);

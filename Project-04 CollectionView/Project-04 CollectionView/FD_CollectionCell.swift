@@ -12,11 +12,14 @@ class FD_CollectionCell: UICollectionViewCell {
     
     var imageView: UIImageView!
     var titleLabel: UILabel!
+    var indexPath = IndexPath(item: 0, section: 0)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         self.backgroundColor = UIColor.white
+        self.layer.cornerRadius = 10
+        self.layer.masksToBounds = true
         
         imageView = UIImageView(frame: bounds)
         self.addSubview(imageView)
