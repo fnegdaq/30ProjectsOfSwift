@@ -29,4 +29,4 @@ inspired by [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift
 
 * Custom UICollectionViewFlowLayout
 
-<img src="https://github.com/fnegdaq/Study-Swift/blob/master/Project-04%20CollectionView/Jietu20190320-135542.gif" width="325" height="612" alt="project1"/> 
+<img src="https://github.com/fnegdaq/30ProjectsOfSwift/blob/master/Project-04%20CollectionView/Jietu20190325-220117.gif" width="325" height="612" alt="project1"/> 
