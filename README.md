@@ -30,3 +30,11 @@ inspired by [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift
 * Custom UICollectionViewFlowLayout
 
 <img src="https://github.com/fnegdaq/30ProjectsOfSwift/blob/master/Project-04%20CollectionView/Jietu20190325-220117.gif" width="325" height="612" alt="project1"/> 
+
+
+**Project-05 SlideOutNavigation**
+
+> For details please reference [raywenderlich](https://www.raywenderlich.com/1005187-how-to-create-your-own-slide-out-panel-navigation)<br />
+
+<img src="https://github.com/fnegdaq/30ProjectsOfSwift/blob/master/Project-05%20SlideOutNavigation/Jietu20190329-114800.gif" width="325" height="612" alt="project1"/> 
+
