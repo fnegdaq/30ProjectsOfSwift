@@ -40,6 +40,7 @@ inspired by [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift
 ```func animateCenterPanelXPosition(targetPosition: CGFloat)```<br  />
 ```func animateCenterPanelXPosition(targetPosition: CGFloat, completion: (Bool) -> Void)```<br  />
 
+oc中使用 __nullable ```completion:(void (^ __nullable)(BOOL finished))completion```
 
 > For details please reference [raywenderlich](https://www.raywenderlich.com/1005187-how-to-create-your-own-slide-out-panel-navigation)<br />
 
