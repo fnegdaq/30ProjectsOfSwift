@@ -47,7 +47,7 @@ oc中使用 __nullable ```completion:(void (^ __nullable)(BOOL finished))complet
 <img src="https://github.com/fnegdaq/30ProjectsOfSwift/blob/master/Project-05%20SlideOutNavigation/Jietu20190329-114800.gif" width="325" height="612" alt="project1"/> 
 
 
-**Project-05 HalfTunes**
+**Project-06 HalfTunes**
 
 - URLSession & URLSessionDownloadTask
 
