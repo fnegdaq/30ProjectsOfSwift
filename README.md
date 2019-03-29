@@ -46,3 +46,17 @@ oc中使用 __nullable ```completion:(void (^ __nullable)(BOOL finished))complet
 
 <img src="https://github.com/fnegdaq/30ProjectsOfSwift/blob/master/Project-05%20SlideOutNavigation/Jietu20190329-114800.gif" width="325" height="612" alt="project1"/> 
 
+
+**Project-05 HalfTunes**
+
+- URLSession & URLSessionDownloadTask
+
+```
+try 出现异常, 使用 do catch 处理异常 
+try? 不处理异常, 返回一个可选值类型, 出现异常返回 nil
+try! 不让异常继续传播, 一旦出现异常程序停止, 类似 NSAssert()
+```
+
+> For details please reference [raywenderlich](https://www.raywenderlich.com/567)<br />
+
+<img src="https://github.com/fnegdaq/30ProjectsOfSwift/blob/master/Project-06%20HalfTunes/Jietu20190329-214441.gif" width="325" height="612" alt="project1"/> 
