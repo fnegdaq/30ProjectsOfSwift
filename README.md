@@ -1,4 +1,4 @@
-# Study-Swift
+# 30ProjectsOfSwift
 
 inspired by [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift) and [soapyigu/Swift-30-Projects](https://github.com/soapyigu/Swift-30-Projects)<br/>
 
