@@ -16,10 +16,13 @@ class ViewController: UIViewController {
     var artwork: [Artwork] = []
     let regionradius: CLLocationDistance = 1000
     
+    let locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+      
         mapView.delegate = self
-        mapView.register(ArtworkMarkerView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        mapView.register(ArtworkView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         
         // Honolulu
         let initiaLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
@@ -30,6 +33,19 @@ class ViewController: UIViewController {
         
         loadInitialData()
         mapView.addAnnotations(artwork)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+          checkLocationAuthorizationStatus()
+    }
+    
+    func checkLocationAuthorizationStatus() {
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            mapView.showsUserLocation = true
+        } else {
+            locationManager.requestWhenInUseAuthorization()
+        }
     }
     
     func centerMapOnLocation(location: CLLocation) {
@@ -55,6 +71,7 @@ class ViewController: UIViewController {
 
 extension ViewController: MKMapViewDelegate {
     // return annotation bubble
+    /*
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard let annotation = annotation as? Artwork else { return nil }
         let identitfier = "marker"
@@ -72,6 +89,7 @@ extension ViewController: MKMapViewDelegate {
         }
         return view
     }
+    */
     
     // tap the info button in the callout, then ios can launch the Maps app
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
