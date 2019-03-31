@@ -60,3 +60,19 @@ try! 不让异常继续传播, 一旦出现异常程序停止, 类似 NSAssert()
 > For details please reference [raywenderlich](https://www.raywenderlich.com/567)<br />
 
 <img src="https://github.com/fnegdaq/30ProjectsOfSwift/blob/master/Project-06%20HalfTunes/Jietu20190329-214441.gif" width="325" height="612" alt="project1"/> 
+
+
+**Project-07 MapKitDemo**
+
+- Mapkit-MKAnnotation
+
+```
+map, flatMap(Swift4.1 后引入 compactMap 替换)
+数组和 Optional 都能支持 map 和 flatMap 函数。
+数组的 flatMap 有两个重载的实现，一个实现等价于先 map 再 flatten，另一个实现用于去掉结果中的 nil。
+```
+
+> For details please reference [raywenderlich](https://www.raywenderlich.com/548)<br />
+
+<img src="https://github.com/fnegdaq/30ProjectsOfSwift/blob/master/Project-07%20MapKitDemo/Jietu20190401-001153%402x.jpg" width="325" height="612" alt="project7"/> 
+
