@@ -32,8 +32,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         sectionTitles = data.keys.sorted(by: {$0 < $1})
         
-        let indexView = IndexView.init(frame: CGRect(x: UIScreen.main.bounds.size.width - 30, y: 60, width: 30, height: UIScreen.main.bounds.size.height - 120))
+        let indexView = IndexView.init(frame: CGRect(x: 0, y: 0, width: 30, height: 30*sectionTitles.count))
+        indexView.center = CGPoint(x: UIScreen.main.bounds.size.width - 15, y: UIScreen.main.bounds.size.height/2)
         indexView.indexArray = sectionTitles
+        indexView.selectIndex = { index in
+            self.tableview .selectRow(at: IndexPath.init(row: 0, section: index), animated: true, scrollPosition: UITableView.ScrollPosition.middle)
+        }
         self.view.addSubview(indexView)
     }
 }
