@@ -76,3 +76,9 @@ map, flatMap(Swift4.1 后引入 compactMap 替换)
 
 <img src="https://github.com/fnegdaq/30ProjectsOfSwift/blob/master/Project-07%20MapKitDemo/Jietu20190401-001153%402x.jpg" width="325" height="612" alt="project7"/> 
 
+
+**Project-09 IndexAnimation**
+
+<img src="https://github.com/fnegdaq/30ProjectsOfSwift/blob/master/Project-09%20IndexAnimation/Jietu20190416-163720.gif" width="325" height="612" alt="project7"/> 
+
+
